@@ -7,7 +7,7 @@ export default function OriginalPresentation() {
       <iframe
         title="Spotify Privacy Policy — Original"
         src={source}
-        style={{ display: "block", width: "100%", height: "100vh", border: 0 }}
+        style={{ display: "block", width: "100%", height: "70vh", border: 0 }}
       />
     </main>
   );
