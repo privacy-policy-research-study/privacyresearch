@@ -1,0 +1,455 @@
+
+/* =========================================
+   VERIFY PRIVACY PRESENTATION
+   Original clean design
+========================================= */
+
+.verify-policy-page {
+  width: calc(100% - 32px);
+  max-width: 1150px;
+  margin: 35px auto 65px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e9e6;
+  border-radius: 22px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.08);
+  color: #191414;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.verify-policy-header {
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #e6eee8;
+}
+
+.verify-policy-label {
+  margin: 0;
+  color: #087c39;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.verify-policy-header h1 {
+  margin: 14px 0;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.2;
+}
+
+.verify-policy-header > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* =========================================
+   INTRODUCTION
+========================================= */
+
+.verify-intro {
+  margin: 30px 0;
+}
+
+.verify-intro h2 {
+  margin: 0 0 10px;
+  font-size: 23px;
+}
+
+.verify-intro p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* =========================================
+   TEN VERIFY CARDS
+========================================= */
+
+.verify-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.verify-section-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: 22px;
+  border: 1px solid #e4e8e4;
+  border-radius: 14px;
+  background: #fafcfb;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.verify-section-card:hover {
+  border-color: #b7d9c1;
+  background: #f5fbf7;
+}
+
+.verify-selected {
+  background: #edfaf0;
+  border-color: #1ed760;
+}
+
+.verify-section-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  min-width: 0;
+}
+
+.verify-section-number {
+  flex-shrink: 0;
+  color: #087c39;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.verify-section-info h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.verify-section-info p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* =========================================
+   VERIFY BUTTONS
+========================================= */
+
+.verify-button {
+  flex-shrink: 0;
+  padding: 12px 19px;
+  border: none;
+  border-radius: 10px;
+  background: #191414;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.verify-button:hover {
+  background: #087c39;
+  transform: translateY(-1px);
+}
+
+.verify-button:active {
+  transform: translateY(0);
+}
+
+.verify-selected .verify-button {
+  background: #087c39;
+}
+
+/* =========================================
+   SCROLL-DOWN MESSAGE
+========================================= */
+
+.verify-scroll-message {
+  margin: 24px 0;
+  padding: 18px 24px;
+  border: 1px solid #bde9c9;
+  border-radius: 12px;
+  background: #eaf9ee;
+  color: #087c39;
+  text-align: center;
+  font-weight: 700;
+}
+
+.verify-scroll-message span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+.verify-scroll-message p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* =========================================
+   EVIDENCE SECTION
+========================================= */
+
+.verify-evidence-section {
+  margin-top: 35px;
+  padding: 24px;
+  border: 1px solid #bde9c9;
+  border-radius: 18px;
+  background: #f7fcf8;
+}
+
+.verify-evidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.verify-evidence-label {
+  margin: 0;
+  color: #087c39;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.verify-evidence-header h2 {
+  margin: 8px 0;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.verify-close-button {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #191414;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.verify-close-button:hover {
+  background: #f0f0f0;
+}
+
+/* =========================================
+   LEFT / RIGHT COMPARISON
+========================================= */
+
+.verify-comparison {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1.4fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Left: Simplified Explanation */
+
+.verify-explanation-box {
+  padding: 22px;
+  border: 1px solid #e1e8e2;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.verify-explanation-box h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #191414;
+}
+
+.verify-explanation-box p {
+  margin: 0 0 25px;
+  color: #444444;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.verify-explanation-box p:last-child {
+  margin-bottom: 0;
+}
+
+.verify-page-number {
+  color: #087c39 !important;
+  font-weight: 800;
+}
+
+.verify-evidence-note {
+  color: #666666 !important;
+  font-size: 13px !important;
+}
+
+/* =========================================
+   RIGHT: ORIGINAL PDF EVIDENCE
+========================================= */
+
+.verify-pdf-box {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dce5dd;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.verify-pdf-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #191414;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.verify-pdf-area {
+  max-height: 720px;
+  overflow: auto;
+  padding: 12px;
+  background: #e8ece9;
+}
+
+.verify-pdf-page {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.verify-pdf-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   YELLOW PDF HIGHLIGHT
+========================================= */
+
+.verify-highlight-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.verify-pdf-highlight {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(255, 221, 0, 0.42);
+  outline: 1px solid rgba(220, 170, 0, 0.8);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* =========================================
+   LOADING AND ERROR MESSAGES
+========================================= */
+
+.verify-loading {
+  padding: 16px;
+  color: #555555;
+  text-align: center;
+  font-size: 14px;
+}
+
+.verify-error {
+  padding: 15px;
+  color: #a21b1b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.verify-policy-footer {
+  margin-top: 35px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0f8f2;
+  text-align: center;
+}
+
+.verify-policy-footer p {
+  margin: 0;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .verify-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .verify-policy-page {
+    width: calc(100% - 20px);
+    margin: 18px auto 40px;
+    padding: 22px 14px;
+  }
+
+  .verify-policy-header h1 {
+    font-size: 30px;
+  }
+
+  .verify-section-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .verify-button {
+    width: 100%;
+  }
+
+  .verify-evidence-section {
+    padding: 14px;
+  }
+
+  .verify-evidence-header {
+    flex-direction: column;
+  }
+
+  .verify-close-button {
+    align-self: flex-end;
+  }
+
+  .verify-explanation-box {
+    padding: 16px;
+  }
+
+  .verify-pdf-toolbar {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .verify-pdf-area {
+    padding: 8px;
+    max-height: 65vh;
+  }
+}
+
+.verify-accordion-item { min-width: 0; }
+.verify-accordion-item .verify-evidence-section { margin-top: 8px; }

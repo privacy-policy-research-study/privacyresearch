@@ -1,0 +1,200 @@
+
+.spotify-visual-page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 12px 50px;
+  text-align: center;
+}
+
+.spotify-infographic-container {
+  position: relative;
+  width: 100%;
+  max-width: 1279px;
+  margin: 0 auto;
+}
+
+.spotify-infographic-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.spotify-hotspot-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.spotify-image-button {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.spotify-image-button:hover {
+  background: rgba(30, 215, 96, 0.12);
+  outline: 2px solid #1ed760;
+  outline-offset: -2px;
+}
+
+.spotify-image-button:focus-visible {
+  outline: 3px solid #006b35;
+  outline-offset: -3px;
+}
+
+.spotify-visual-help {
+  margin: 20px 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.spotify-full-policy-link {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 10px;
+  background: #191414;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.spotify-full-policy-link:hover {
+  background: #006b35;
+}
+
+.spotify-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.spotify-modal-box {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 38px;
+  border-radius: 20px;
+  background: #fff;
+  color: #191414;
+  text-align: left;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+}
+
+.spotify-modal-x {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #191414;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.spotify-modal-category {
+  color: #087c39;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.spotify-modal-box h2 {
+  margin: 12px 0 18px;
+  font-size: 29px;
+}
+
+.spotify-modal-summary {
+  font-weight: 700;
+}
+
+.spotify-modal-box p,
+.spotify-modal-box li {
+  line-height: 1.7;
+}
+
+.spotify-modal-return {
+  margin-top: 20px;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #191414;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.spotify-modal-return:hover {
+  background: #087c39;
+}
+
+@media (max-width: 600px) {
+  .spotify-modal-box {
+    padding: 28px 22px;
+  }
+}
+
+/* Responsive study layout: a readable heading and a contained infographic. */
+.spotify-visual-page-refined {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 32px) 16px 56px;
+  box-sizing: border-box;
+}
+.spotify-visual-header {
+  text-align: left;
+  margin: 0 auto 24px;
+  max-width: 900px;
+}
+.spotify-visual-eyebrow {
+  margin: 0 0 9px;
+  color: #167a40;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.spotify-visual-header h1 {
+  margin: 0 0 10px;
+  color: #171c19;
+  font-size: clamp(28px, 4.5vw, 42px);
+  line-height: 1.15;
+}
+.spotify-visual-header > p:last-child {
+  margin: 0;
+  color: #526359;
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+}
+.spotify-visual-infographic-frame {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 1312 / 1065;
+  overflow: hidden;
+  border-radius: 16px;
+  line-height: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .08);
+}
+@media (max-width: 600px) {
+  .spotify-visual-page-refined { padding: 18px 10px 36px; }
+  .spotify-visual-header { margin-bottom: 18px; padding: 0 6px; }
+  .spotify-visual-infographic-frame { border-radius: 10px; }
+}

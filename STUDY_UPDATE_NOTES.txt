@@ -1,0 +1,9 @@
+Professor feedback update (2026-11-20)
+- Preserved current AudioPresentation.jsx and its CSS unchanged.
+- Visual: embedded colorful draft attention indicators on each infographic card, removed separate scale toggle and full-policy link. The bottom full-policy CTA in the image is hidden by clipping the infographic in the React view. Ratings are preexisting draft research-team values; obtain faculty approval before participant release.
+- Original: displays the supplied 33-page Spotify policy PDF in a Spotify-styled wrapper, replacing an incomplete HTML excerpt. This is NOT a pixel-identical copy of Spotify's live webpage; an exact copy requires approved source HTML/assets.
+- Text: removed external policy footer and references to visual condition.
+- Verify: removed button to open full original PDF separately; the source excerpts and inline PDF viewer remain because verification is the point of this condition.
+- App: removed condition numbers, cross-condition summary, study navigation, and footer in participant (?mode=...) views. Homepage still intentionally provides an admin/demo chooser when no mode is specified.
+- Deployment: each participant must receive only their own direct ?mode= URL. Do not distribute the base homepage to participants.
+- Build not independently verified in this environment; run npm install and npm run build locally before deployment.
